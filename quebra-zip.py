@@ -9,7 +9,7 @@ from zipfile import ZipFile, BadZipFile
 import subprocess
 from concurrent.futures import ThreadPoolExecutor
 
-SUPPORTED_ZIPFILE_METHODS = {0, 8}  # Sem compressão ou Deflate
+SUPPORTED_ZIPFILE_METHODS = {0, 8}  
 
 def detect_encryption_and_compression(zip_file_path):
     try:
@@ -116,13 +116,13 @@ class ZipCrackerApp:
         self.encryption_type = tk.StringVar()
         
         button_style = {
-            "bg": "#60B5FF",  # Cor de fundo (verde)
-            "fg": "white",    # Cor do texto (branco)
-            "font": ("Arial", 10),  # Fonte
-            "width": 15,      # Largura do botão
-            "height": 1,      # Altura do botão
-            "bd": 3,          # Largura da borda
-            "relief": "sunken"  # Estilo da borda (raised, flat, sunken, etc.)
+            "bg": "#60B5FF",  
+            "fg": "white",    
+            "font": ("Arial", 10),  
+            "width": 15,      
+            "height": 1,      
+            "bd": 3,          
+            "relief": "sunken"  
         }
 
         # Layout
@@ -195,6 +195,6 @@ class ZipCrackerApp:
         self.encryption_type.set("")
 
 if __name__ == "__main__":
-    root = tb.Window(themename="darkly")  # Outros temas: 'cyborg', 'superhero', 'solar', 'darkly'
+    root = tb.Window(themename="darkly")  
     app = ZipCrackerApp(root)
     root.mainloop()
